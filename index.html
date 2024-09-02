@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monografía sobre Inteligencia Artificial</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap">
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #e0e0e0;
+            background-color: #121212;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background: #1f1f1f;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            border-bottom: 1px solid #333;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 {
+            font-family: 'Roboto', sans-serif;
+            color: #b39ddb;
+            margin: 0;
+            padding-right: 20px;
+        }
+        .header .icon-container {
+            display: flex;
+            gap: 20px;
+        }
+        .header .icon-container img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+        .sidebar {
+            width: 250px;
+            background: #1f1f1f;
+            padding: 20px;
+            position: fixed;
+            top: 60px;
+            height: calc(100vh - 60px);
+            overflow-y: auto;
+            border-right: 2px solid #b39ddb;
+            text-align: center;
+        }
+        .sidebar h2 {
+            font-family: 'Roboto', sans-serif;
+            color: #b39ddb;
+            margin-top: 0;
+        }
+        .sidebar a {
+            display: block;
+            color: #b39ddb;
+            text-decoration: none;
+            margin: 10px 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            margin-left: 270px;
+            margin-top: 20px;
+            width: calc(100% - 270px);
+            padding: 20px;
+            background: #1f1f1f;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+        h1, h2 {
+            font-family: 'Roboto', sans-serif;
+            color: #b39ddb;
+            text-align: center;
+        }
+        p, ul {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: bold;
+            padding: 20px;
+        }
+        ul {
+            padding-left: 0;
+            list-style-position: inside;
+        }
+        blockquote {
+            border-left: 3px solid #b39ddb;
+            padding-left: 15px;
+            margin: 15px auto;
+            color: #e0e0e0;
+            background: #1a1a1a;
+            border-radius: 4px;
+            max-width: 80%;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1f1f1f;
+            color: #b39ddb;
+            border-radius: 0 0 8px 8px;
+        }
+        .detail-page {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #121212;
+            color: #e0e0e0;
+            overflow: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .detail-page img {
+            max-width: 100%;
+            height: auto;
+            float: left;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+        .detail-page .content {
+            overflow: hidden;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+        .back-button img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Educación <span class="highlight">A<span style="color: #39ff14;">rtifi</span>cial</span></h1>
+        <div class="icon-container">
+            <a href="#detalle1"><img src="https://cdn-icons-png.flaticon.com/512/12222/12222589.png" alt="ChatGPT"></a>
+            <a href="#detalle2"><img src="https://seeklogo.com/images/M/meta-icon-new-facebook-2021-logo-83520C311D-seeklogo.com.png" alt="Meta IA"></a>
+            <a href="#detalle3"><img src="https://cdn.prod.website-files.com/64f85dc3e20068093f54e701/651190f9021ca70225749d24_Luzia-opt.png" alt="LuzIA"></a>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <h2>Índice</h2>
+        <a href="#introduccion">Introducción</a>
+        <a href="#estadisticas">Estadísticas de Uso</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#contras">Contras</a>
+        <a href="#medidas">Medidas</a>
+        <a href="#conclusion">Conclusión</a>
+    </div>
+
+    <div class="container">
+        <h1>Educación <span class="highlight">A<span style="color: #39ff14;">rtifi</span>cial</span></h1>
+        
+        <h2 id="introduccion">Introducción</h2>
+        <p>
+            Durante el último tiempo las inteligencias artificiales se popularizaron a un nivel inmenso,
+            hoy en día es muy común el uso de la IA. Son miles las personas que la usan para un fin
+            personal, en esta monografía investigaremos el uso de la inteligencia artificial en la región
+            educativa, el potencial que esta tiene para lograr un uso positivo de la misma y a lo que puede
+            llevar en un futuro.
+        </p>
+        <img src="https://itcl.es/wp-content/uploads/2021/07/Cel.ia_.png" alt="Imagen 1" style="width: 100%; max-width: 500px; display: block; margin: 20px auto;">
+        
+        <h2 id="estadisticas">Estadísticas de Uso</h2>
+        <p>
+            Con mi compañero Ignacio Trujillo de la monografía “Transformación Educativa: Inteligencia Artificial y aprendizaje”
+            hicimos un estudio donde determinamos que de 115 alumnos, 87 usan IA, esto es un 91,3% a favor, 75,6% usan esta IA
+            para distintos fines, 21 de 28 alumnos por curso usan IA, un 50% de los profesores apoyan el uso de la IA.
+        </p>
+        <p>
+            También entrevistamos al ViceDirector Miguel Molina el cual declara que:
+        </p>
+        <blockquote>
+            “Es una muy buena herramienta presente en todos lados, la probé personalmente para las notas de algunos estudiantes,
+            pero hay que verificar el resultado ya que puede ser propensa a errores sin datos suficientes.”
+        </blockquote>
+        <p>
+            A nivel nacional un 72% de los estudiantes en Argentina utilizan internet y herramientas digitales, una encuesta realizada
+            por Educ.ar apunta que la cantidad de alumnos que utilizan herramientas digitales es creciente.
+        </p>
+        
+        <h2 id="beneficios">Beneficios</h2>
+        <p>
+            La IA como toda herramienta aporta unos beneficios considerables:
+        </p>
+        <ul>
+            <li><strong>Plataformas Adaptativas:</strong> Se puede adaptar al ritmo y nivel de cada alumno.</li>
+            <li><strong>Corrección Automatizada:</strong> Una corrección más rápida para cada alumno.</li>
+            <li><strong>Monitoreo del Progreso:</strong> Analizar datos sobre el progreso de cada estudiante.</li>
+        </ul>
+        
+        <h2 id="contras">Contras</h2>
+        <p>
+            Claro que, al ser una tecnología reciente, esta tiene sus fallos. Específicamente, debido a la popularización que logró,
+            esta, en gran medida desregularizada, lo que puede llevar a:
+        </p>
+        <ul>
+            <li><strong>Desigualdades:</strong> No todos los estudiantes tienen acceso a herramientas similares.</li>
+            <li><strong>Dependencia:</strong> Puede generar una dependencia excesiva en lugar de desarrollar habilidades personales.</li>
+            <li><strong>Privacidad:</strong> Los datos sensibles pueden ser vulnerables a filtraciones.</li>
+        </ul>
+        
+        <h2 id="medidas">Medidas</h2>
+        <p>
+            Para una correcta implementación de IA en el ámbito educativo se deberían considerar las siguientes medidas:
+        </p>
+        <ul>
+            <li><strong>Desarrollar Políticas Claras:</strong> Asegurarse de que las herramientas se usen de manera ética.</li>
+            <li><strong>Capacitación Docente:</strong> Capacitar a los docentes en el uso efectivo y crítico de estas herramientas.</li>
+            <li><strong>Protección de Datos:</strong> Implementar medidas robustas para proteger la privacidad de los estudiantes.</li>
+        </ul>
+        
+        <h2 id="conclusion">Conclusión</h2>
+        <p>
+            La IA tiene un gran potencial para transformar la educación, haciendo el proceso más personalizado y eficiente.
+            Sin embargo, es importante usarla de manera consciente y equilibrada, manteniendo en cuenta los posibles riesgos y
+            desarrollando estrategias para mitigarlos. Así, la IA puede ser una herramienta poderosa para el avance educativo y
+            el desarrollo de nuevas habilidades.
+        </p>
+    </div>
+    
+    <footer>
+        <p>© 2024 Monografía sobre Inteligencia Artificial. Todos los derechos reservados.</p>
+    </footer>
+    
+    <div class="detail-page" id="detalle1">
+        <img src="https://cdn-icons-png.flaticon.com/512/12222/12222589.png" alt="ChatGPT">
+        <div class="content">
+            <h2>ChatGPT</h2>
+            <p>ChatGPT es una inteligencia artificial desarrollada por OpenAI que puede entender y generar texto en lenguaje natural. Es como un asistente virtual que puede responder preguntas, ayudar a escribir y proporcionar información.</p>
+            
+            <h3>¿Cómo puede ayudar en el sector educativo?</h3>
+            <p><strong>Planificación de Clases:</strong></p>
+            <ul>
+                <li><strong>Creación de Materiales:</strong> Genera planes de lecciones, preguntas de exámenes y actividades educativas.</li>
+                <li><strong>Adaptación de Contenidos:</strong> Ajusta el material para diferentes niveles educativos y necesidades de los estudiantes.</li>
+            </ul>
+            <p><strong>Apoyo a los Estudiantes:</strong></p>
+            <ul>
+                <li><strong>Tutoría Virtual:</strong> Responde preguntas fuera del horario de clases y ayuda con tareas.</li>
+                <li><strong>Mejora de Escritura:</strong> Ofrece retroalimentación y sugerencias para mejorar los textos de los estudiantes.</li>
+            </ul>
+            <p><strong>Gestión del Aula:</strong></p>
+            <ul>
+                <li><strong>Organización:</strong> Ayuda a planificar y organizar tareas y recordatorios.</li>
+                <li><strong>Ideas para Actividades:</strong> Sugerencias para hacer las clases más variadas e interesantes.</li>
+            </ul>
+            <p><strong>Beneficios para los Profesores:</strong></p>
+            <ul>
+                <li><strong>Ahorro de Tiempo:</strong> Automatiza tareas repetitivas y facilita la planificación.</li>
+                <li><strong>Acceso a Recursos:</strong> Proporciona ideas y materiales educativos de forma rápida.</li>
+                <li><strong>Apoyo Personalizado:</strong> Ofrece asistencia adicional tanto a profesores como a estudiantes.</li>
+            </ul>
+            <p>En resumen, ChatGPT puede hacer más eficiente el proceso educativo al ayudar en la planificación, ofrecer soporte a estudiantes y gestionar tareas administrativas, mejorando así la experiencia de enseñanza y aprendizaje.</p>
+        </div>
+        <img src="https://icones.pro/wp-content/uploads/2021/06/icone-fleche-gauche-rouge.png" class="back-button" alt="Volver" onclick="cerrarDetalle('detalle1')">
+    </div>
+    
+    <div class="detail-page" id="detalle2">
+        <img src="https://seeklogo.com/images/M/meta-icon-new-facebook-2021-logo-83520C311D-seeklogo.com.png" alt="Meta IA">
+        <div class="content">
+            <h2>Meta IA</h2>
+            <p>Meta IA es una inteligencia artificial desarrollada por Meta (anteriormente Facebook) que se especializa en comprender y generar texto, imágenes y más. Funciona como un asistente digital avanzado que puede interactuar con los usuarios y proporcionar información de manera efectiva.</p>
+            
+            <h3>¿Cómo puede ayudar en el sector educativo?</h3>
+            <p><strong>Planificación de Clases:</strong></p>
+            <ul>
+                <li><strong>Creación de Materiales:</strong> Genera planes de lecciones, actividades educativas y preguntas para exámenes.</li>
+                <li><strong>Adaptación de Contenidos:</strong> Personaliza el material según el nivel de los estudiantes y sus necesidades específicas.</li>
+            </ul>
+            <p><strong>Apoyo a los Estudiantes:</strong></p>
+            <ul>
+                <li><strong>Tutoría Virtual:</strong> Ofrece asistencia y responde preguntas fuera del horario escolar, apoyando en tareas y proyectos.</li>
+                <li><strong>Recursos Educativos:</strong> Proporciona resúmenes, explicaciones y ejemplos para facilitar el aprendizaje.</li>
+            </ul>
+            <p><strong>Gestión del Aula:</strong></p>
+            <ul>
+                <li><strong>Organización:</strong> Ayuda a organizar el contenido del curso y gestionar recordatorios y plazos.</li>
+                <li><strong>Ideas Creativas:</strong> Sugerencias para actividades y métodos innovadores para involucrar a los estudiantes.</li>
+            </ul>
+            <p><strong>Beneficios para los Profesores:</strong></p>
+            <ul>
+                <li><strong>Eficiencia Mejorada:</strong> Automatiza la creación de materiales y facilita la planificación.</li>
+                <li><strong>Acceso a Recursos Rápidos:</strong> Proporciona recursos educativos y apoyo personalizado de manera ágil.</li>
+                <li><strong>Apoyo Continuo:</strong> Ofrece asistencia constante tanto para el profesorado como para los alumnos.</li>
+            </ul>
+            <p>En resumen, Meta IA puede transformar la educación al simplificar la planificación de clases, ofrecer apoyo adicional a los estudiantes y mejorar la gestión del aula, haciendo el proceso educativo más eficiente y accesible.</p>
+        </div>
+        <img src="https://icones.pro/wp-content/uploads/2021/06/icone-fleche-gauche-rouge.png" class="back-button" alt="Volver" onclick="cerrarDetalle('detalle2')">
+    </div>
+    
+    <div class="detail-page" id="detalle3">
+        <img src="https://cdn.prod.website-files.com/64f85dc3e20068093f54e701/651190f9021ca70225749d24_Luzia-opt.png" alt="LuzIA">
+        <div class="content">
+            <h2>LuzIA</h2>
+            <p>LuzIA es una inteligencia artificial diseñada para facilitar tareas complejas mediante la comprensión y generación de texto, así como la interacción en tiempo real. LuzIA puede servir como una herramienta valiosa en el sector educativo al ofrecer soporte tanto a profesores como a estudiantes.</p>
+            
+            <h3>¿Cómo puede ayudar en el sector educativo?</h3>
+            <p><strong>Planificación de Clases:</strong></p>
+            <ul>
+                <li><strong>Desarrollo de Materiales:</strong> Genera planes de lecciones, actividades y evaluaciones adaptadas a diferentes niveles educativos.</li>
+                <li><strong>Adaptación de Contenidos:</strong> Personaliza los recursos educativos según las necesidades y habilidades específicas de los estudiantes.</li>
+            </ul>
+            <p><strong>Apoyo a los Estudiantes:</strong></p>
+            <ul>
+                <li><strong>Asistencia Académica:</strong> Proporciona ayuda con tareas y dudas, ofreciendo explicaciones y ejemplos claros.</li>
+                <li><strong>Recursos Educativos:</strong> Facilita el acceso a materiales y resúmenes, ayudando a los estudiantes a entender mejor los temas.</li>
+            </ul>
+            <p><strong>Gestión del Aula:</strong></p>
+            <ul>
+                <li><strong>Organización de Contenidos:</strong> Ayuda a estructurar y organizar el contenido del curso, gestionando plazos y recordatorios.</li>
+                <li><strong>Creatividad en la Enseñanza:</strong> Ofrece ideas innovadoras para actividades y métodos de enseñanza, haciendo las clases más dinámicas.</li>
+            </ul>
+            <p><strong>Beneficios para los Profesores:</strong></p>
+            <ul>
+                <li><strong>Optimización del Tiempo:</strong> Simplifica la creación de materiales y la planificación, permitiendo a los profesores dedicar más tiempo a la enseñanza.</li>
+                <li><strong>Recursos al Alcance:</strong> Ofrece acceso rápido a una variedad de recursos educativos y soporte personalizado.</li>
+                <li><strong>Apoyo Continuo:</strong> Proporciona asistencia constante, tanto para la preparación de clases como para resolver dudas de los estudiantes.</li>
+            </ul>
+            <p>En resumen, LuzIA puede transformar el ámbito educativo al facilitar la planificación de clases, ofrecer apoyo adicional a los estudiantes y mejorar la gestión del aula, haciendo el proceso educativo más eficiente y efectivo.</p>
+        </div>
+        <img src="https://icones.pro/wp-content/uploads/2021/06/icone-fleche-gauche-rouge.png" class="back-button" alt="Volver" onclick="cerrarDetalle('detalle3')">
+    </div>
+    
+    <script>
+        function cerrarDetalle(detalleId) {
+            document.getElementById(detalleId).style.display = 'none';
+        }
+
+        document.querySelectorAll('.icon-container a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                document.querySelectorAll('.detail-page').forEach(page => {
+                    page.style.display = 'none';
+                });
+                const detalleId = this.getAttribute('href').substring(1);
+                document.getElementById(detalleId).style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
